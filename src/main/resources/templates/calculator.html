@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab7_IIT</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<form action="/calculate" method="post">
+    <input type="number" name="num1" placeholder="Enter first number" required><br><br>
+    <input type="number" name="num2" placeholder="Enter second number" required><br><br>
+    <button type="submit" name="operation" value="add">+</button>
+    <button type="submit" name="operation" value="subtract">-</button>
+    <button type="submit" name="operation" value="multiply">*</button>
+    <button type="submit" name="operation" value="divide">/</button>
+</form>
+<br>
+<h2>Result:</h2>
+<p th:text="${result != null ? 'Result: ' + result : ''}"></p>
+<p th:text="${result2 != null ? 'Result: ' + result2 : ''}"></p>
+<p th:text="${message}"></p>
+</body>
+</html>
